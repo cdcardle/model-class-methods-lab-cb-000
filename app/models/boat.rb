@@ -6,7 +6,7 @@ class Boat < ActiveRecord::Base
   def self.first_five
     boats = []
     Boat.all.each do |boat|
-      boats << boat if boat.id <6
+      boats << boat if boat.id < 6
     end
     boats
   end
