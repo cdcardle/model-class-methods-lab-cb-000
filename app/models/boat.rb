@@ -19,7 +19,7 @@ class Boat < ActiveRecord::Base
     order(name: :desc).limit(3)
   end
 
-  def without_a_captain
+  def self.without_a_captain
     where(captain: false)
   end
 end
