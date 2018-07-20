@@ -14,10 +14,10 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers
-    sailors & motorboat_operators
+    where(id: sailors & motorboat_operators)
   end
 
   def self.non_sailors
-
+    where(id: !sailors)
   end
 end
