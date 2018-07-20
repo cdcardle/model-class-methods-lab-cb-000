@@ -22,4 +22,12 @@ class Boat < ActiveRecord::Base
   def self.without_a_captain
     where(captain: false)
   end
+
+  def self.sailboats
+    
+  end
+
+  def self.with_three_classifications
+    
+  end
 end
