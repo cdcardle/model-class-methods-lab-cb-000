@@ -10,7 +10,7 @@ class Captain < ActiveRecord::Base
   end
 
   def self.talented_seafarers
-    joins(boats: :classifications).where('classifcations.name = Sailboat').where('classifcations.name = "Motorboat"')
+    joins(boats: :classifications).where('classifications.name = Sailboat').where('classifications.name = "Motorboat"')
   end
 
   def self.non_sailors
