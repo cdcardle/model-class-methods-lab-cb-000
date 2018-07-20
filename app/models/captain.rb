@@ -7,6 +7,11 @@ class Captain < ActiveRecord::Base
 
   def self.sailors
     # joins(boats: :classifications).where('classifications.name = "Sailboat"')
+    captains = []
+    Boat.sailboats.each do |boat|
+      captains << boat.captain
+    end
+    captains.uniq
   end
 
   def self.talented_seafarers
