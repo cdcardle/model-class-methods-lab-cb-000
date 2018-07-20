@@ -4,10 +4,6 @@ class Boat < ActiveRecord::Base
   has_many    :classifications, through: :boat_classifications
 
   def self.first_five
-    boats = []
-    Boat.all.each do |boat|
-      boats << boat if boat.id < 6
-    end
-    boats
+    Boat.where(id <= , 5)
   end
 end
