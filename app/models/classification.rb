@@ -6,7 +6,7 @@ class Classification < ActiveRecord::Base
     all
   end
 
-  # def self.longest
-  #
-  # end
+  def self.longest
+    joins(:boats).where('boats.id = Boat.longest')
+  end
 end
